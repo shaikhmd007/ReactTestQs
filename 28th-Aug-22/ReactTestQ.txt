@@ -1,0 +1,69 @@
+Q1. What all information is stored in package.json and how is it different from package-lock.json?
+
+Ans->
+This contains information about the project that we are working on.
+This contains things like name, description, version, author, etc etc.
+This contains an object called as dependencies - This dependencies contains a collection of all the packages that we are using in our react application. All the packages that we have installed.
+Suppose, I import a package called as PackageA. It is possible that PackageA is using other packages as it's dependency, PackageAA, PackageAB, PackageAC.
+So, when I am installing packageA, indirectly I am also installing PackageAA and PackageAB and PackageAC. Total, we are installing 4 packages.
+devDependencies - This is the collection of packages which is used for development purposes. This collection of packages is never pushed to the production server. Which keeps the load comparatively light.
+
+It is different from package-lock.json bcause of,,
+Package-lock.json file contains all the list of addtional (indirect) dependency installations.
+This is a very comprehensive list. (Detailed)
+We never touch this file. This is created by the node package manager automatically. We just use it and share with other team members.
+
+
+Q2 > Is react a framework or a library and what is the difference between the two?
+
+Ans => React is JavaScript library For creating User interface and single page App or fast Intereactive web pages and applications, React is most popular JavaScript library nowDays . It is very faast and light weight bcause , its can import only those libararry pakage which we need to used and install as per required. we can also develop mobile application using React , that is React Native. react makes the development easy , and creating fast Fronted and UIs 
+
+Here most people may confused about FrameWork And Libarary , what is react is Actually ? , is this a framework or libarary , it is cleared conceptually therfore library , and in the sense libarary is a small thing compared with framework
+
+In a library, it only contains the basics.
+eg :
+In React, API calls are not there, we import and axios. There is no routing by default, we need to use react-router.
+In Angualar, all these things are built-in.
+Libraries only contains the bare minimum that you need to get started. Anything extra, you need to install separately.
+
+Libarary are small in Size 
+framework are big in sixe
+
+
+
+
+Q3. >Does React uses Html? Explain ?? 
+
+
+Ans =>  The difference between HTML Element and a React Component?
+HTML element is the element which is part of core HTML tags.
+React Component is a function/class which contains html elements along with relevant functionalities.
+React Component contains various HTML elements.
+Example:
+App is a Component.
+div / header / button is an element.
+Each component should have each separate file.
+Generally, we put all the components inside a directory called as components.
+Whatever the file name we give, that should be the function/class name. That is the component name.
+The component names have to be in PascalCasing.
+After creating the function/class, we also need to export it. Typically using export default
+Whichever component needs it, it will import that in order to use.
+If any component does not want to use it. No need to import.
+
+
+
+
+
+Q4 => Briefly describe what is the use of the following in react js?
+
+App.js
+Index.js
+app.css
+index.html
+
+Details of src directory
+App.js - This is a component. This is the first component that is used in any react application.
+index.js - This contains the whole JS for your website. This also contains the initialization code for React.
+App.css - This is the CSS for App component. That means, whatever HTML we write in App can access this CSS, outside of that, other components cannot access.
+index.css - This contains the whole CSS for your website. If we write any CSS code here, it will be avialble throughout the whole website.
+index.html = > Index.html is main Document file 
